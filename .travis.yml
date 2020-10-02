@@ -1,0 +1,10 @@
+language: php
+
+services:
+  - docker
+
+script:
+  - set -e
+  - docker run --rm -v "$(pwd)":/project -w /project -ti jakzal/phpqa:php7.4 parallel-lint src tests
+  - docker run --rm -v "$(pwd)":/project -w /project -ti jakzal/phpqa:php7.4 phpcs -v --standard=PSR12 src tests
+  - composer update -n && ./vendor/bin/phpunit

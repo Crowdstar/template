@@ -18,14 +18,27 @@
 
 declare(strict_types=1);
 
-namespace CrowdStar\Template\TemplateEngine;
+namespace CrowdStar\Tests\Template;
+
+use CrowdStar\Template\Template;
+use CrowdStar\Template\TemplateEngine\Mustache;
+use PHPUnit\Framework\TestCase;
 
 /**
- * Class AbstractTemplateEngine
- *
- * @package CrowdStar\Template\TemplateEngine
+ * Class TemplateTest
  */
-abstract class AbstractTemplateEngine
+class TemplateTest extends TestCase
 {
-    abstract public function render(string $template, $context = []): string;
+    /**
+     * @covers Template::render
+     * @covers Mustache
+     */
+    public function testMustache(): void
+    {
+        self::assertSame(
+            "Hello World!",
+            (new Template(new Mustache()))->render('Hello {{planet}}', ['planet' => 'World!']),
+            ""
+        );
+    }
 }

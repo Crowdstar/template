@@ -18,14 +18,6 @@
 
 declare(strict_types=1);
 
-namespace CrowdStar\Template\TemplateEngine;
-
-/**
- * Class AbstractTemplateEngine
- *
- * @package CrowdStar\Template\TemplateEngine
- */
-abstract class AbstractTemplateEngine
-{
-    abstract public function render(string $template, $context = []): string;
-}
+error_reporting(E_ALL);
+ini_set('display_errors', '1');
+ini_set('display_startup_errors', '1');
