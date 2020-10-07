@@ -5,7 +5,7 @@
 
 # Summary
 
-A wrapper for template engines. The purpose of this library is to make it easier to switch to a different template engine.
+A wrapper for template engines. The purpose of this library is to make it easier to switch between different template engines.
 
 # Installation
 
