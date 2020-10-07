@@ -1,6 +1,6 @@
 {
     "name": "crowdstar/template",
-    "description": "A PHP template engine used at Glu Mobile.",
+    "description": "A wrapper for template engines.",
     "homepage": "https://www.glu.com",
     "license": "Apache-2.0",
     "type": "library",
